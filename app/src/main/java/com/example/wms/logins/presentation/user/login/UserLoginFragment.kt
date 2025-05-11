@@ -82,8 +82,7 @@ class UserLoginFragment : Fragment() {
                     PreferenceHelper.saveUserRole(requireContext(), "user")
 
                     // Navigate to User Dashboard or Home
-                    val intent = Intent(requireActivity(), UserHomeActivity::class.java)
-                    startActivity(intent)
+                    findNavController().navigate(UserLoginFragmentDirections.actionUserLoginFragmentToUserHomeFragment())
                 }
 
                 is LoginResult.Error -> {

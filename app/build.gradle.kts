@@ -6,6 +6,7 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-kapt")
     id("com.google.firebase.crashlytics")
+    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
 }
 
 android {
@@ -69,6 +70,7 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(libs.play.services.maps)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -107,5 +109,13 @@ dependencies {
 
     // Firebase Authentication (Optional, if you plan to use it)
     implementation ("com.google.firebase:firebase-auth-ktx")
+
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.25")
+
+    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-scalars:2.9.0")
+    implementation ("org.jsoup:jsoup:1.18.1")
+    implementation ("org.osmdroid:osmdroid-android:6.1.17")
 }
 

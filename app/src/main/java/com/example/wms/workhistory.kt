@@ -1,3 +1,8 @@
 package com.example.wms
 
-class workhistory 
+import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
+
+class workhistory:AppCompatActivity() {
+
+}

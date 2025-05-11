@@ -61,10 +61,7 @@ class AdminLoginFragment : Fragment() {
                         getString(R.string.login_success),
                         Toast.LENGTH_SHORT
                     ).show()
-                    // Save role in SharedPreferences
                     PreferenceHelper.saveUserRole(requireContext(), "admin")
-                    // Navigate to Admin Dashboard or Home
-
                 }
 
                 is LoginResult.Error -> {

@@ -17,7 +17,6 @@ class AdminLoginViewModel : ViewModel() {
     val loginResult: LiveData<LoginResult> = _loginResult
 
     init {
-        // Initialize admin credentials when ViewModel is created
         viewModelScope.launch {
             RepositoryModule.adminLoginRepository.initializeAdminCredentials()
         }

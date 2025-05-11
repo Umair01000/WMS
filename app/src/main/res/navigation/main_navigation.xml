@@ -40,7 +40,7 @@
         android:id="@+id/userForgetPasswordFragment"
         android:name="com.example.wms.logins.presentation.user.forget.UserForgetPasswordFragment"
         android:label="fragment_user_forget_password"
-        tools:layout="@layout/fragment_user_forget_password" >
+        tools:layout="@layout/fragment_user_forget_password">
         <action
             android:id="@+id/action_userForgetPasswordFragment_to_userHomeFragment"
             app:destination="@id/userHomeFragment" />
@@ -54,14 +54,126 @@
         android:id="@+id/splashFragment"
         android:name="com.example.wms.ui.splash.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_userLoginFragment"
             app:destination="@id/userLoginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/userHomeFragment"
-        android:name="com.example.wms.UserHomeFragment"
+        android:name="com.example.wms.screens.user.home.UserHomeFragment"
         android:label="fragment_user_home"
-        tools:layout="@layout/fragment_user_home" />
+        tools:layout="@layout/fragment_user_home">
+        <action
+            android:id="@+id/action_userHomeFragment_to_billCheckFragment"
+            app:destination="@id/billCheckFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_fragmentHelpline"
+            app:destination="@id/fragmentHelpline" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_applyConditionsFragment"
+            app:destination="@id/applyConditionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/billCheckFragment"
+        android:name="com.example.wms.screens.user.bill.presentation.BillCheckFragment"
+        android:label="fragment_bill_check"
+        tools:layout="@layout/fragment_bill_check">
+        <action
+            android:id="@+id/action_billCheckFragment_to_billDeatailFragment"
+            app:destination="@id/billDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/billDetailsFragment"
+        android:name="com.example.wms.screens.user.bill.presentation.BillDetailsFragment"
+        android:label="fragment_bill_deatail"
+        tools:layout="@layout/fragment_bill_details">
+        <argument
+            android:name="cCode"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHelpline"
+        android:name="com.example.wms.screens.user.helpline.FragmentHelpline"
+        android:label="fragment_helpline"
+        tools:layout="@layout/fragment_helpline" />
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.wms.screens.user.location.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/applyNameFragment"
+        android:name="com.example.wms.screens.user.apply.presentation.screens.ApplyNameFragment"
+        android:label="fragment_apply_name"
+        tools:layout="@layout/fragment_apply_name">
+        <action
+            android:id="@+id/action_applyNameFragment_to_applyCnicFragment"
+            app:destination="@id/applyCnicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/applyConditionsFragment"
+        android:name="com.example.wms.screens.user.apply.presentation.screens.ApplyConditionsFragment"
+        android:label="fragment_apply_conditions"
+        tools:layout="@layout/fragment_apply_conditions">
+        <action
+            android:id="@+id/action_applyConditionsFragment_to_applyNameFragment"
+            app:destination="@id/applyNameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/applyCnicFragment"
+        android:name="com.example.wms.screens.user.apply.presentation.screens.ApplyCnicFragment"
+        android:label="fragment_apply_cnic"
+        tools:layout="@layout/fragment_apply_cnic">
+        <action
+            android:id="@+id/action_applyCnicFragment_to_applyNumberFragment"
+            app:destination="@id/applyNumberFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/applyNumberFragment"
+        android:name="com.example.wms.screens.user.apply.presentation.screens.ApplyNumberFragment"
+        android:label="fragment_apply_number"
+        tools:layout="@layout/fragment_apply_number">
+        <action
+            android:id="@+id/action_applyNumberFragment_to_applyAddressFragment"
+            app:destination="@id/applyAddressFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="cnic"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/applyAddressFragment"
+        android:name="com.example.wms.screens.user.apply.presentation.screens.ApplyAddressFragment"
+        android:label="fragment_apply_address"
+        tools:layout="@layout/fragment_apply_address" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="cnic"
+            app:argType="string" />
+        <argument
+            android:name="number"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_applyAddressFragment_to_applySuccessFragment"
+            app:destination="@id/applySuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/applySuccessFragment"
+        android:name="com.example.wms.screens.user.apply.presentation.screens.ApplySuccessFragment"
+        android:label="fragment_apply_success"
+        tools:layout="@layout/fragment_apply_success" />
 </navigation>

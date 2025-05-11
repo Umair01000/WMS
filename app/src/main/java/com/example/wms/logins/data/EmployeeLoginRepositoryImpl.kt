@@ -43,7 +43,6 @@ class EmployeeLoginRepositoryImpl(
                 employeeDoc.set(employeeCredentials).await()
             }
         } catch (e: Exception) {
-            // Handle initialization error if necessary
             e.printStackTrace()
         }
     }

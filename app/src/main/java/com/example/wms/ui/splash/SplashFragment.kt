@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.wms.R
 import com.example.wms.databinding.FragmentSplashBinding
+import com.example.wms.logins.presentation.user.login.UserLoginFragmentDirections
 import com.example.wms.ui.employee.employee
 import com.example.wms.ui.user.UserHomeActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -35,10 +36,8 @@ class SplashFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        // Initialize SharedPreferences
         sharedPreferences = requireContext().getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
 
-        // Delay to simulate splash screen duration
         Handler(Looper.getMainLooper()).postDelayed({
             navigateBasedOnLoginState()
         }, splashDelay)
@@ -60,21 +59,16 @@ class SplashFragment : Fragment() {
                 }
 
                 "employee" -> {
-                    // Navigate to User Dashboard or Home
                     val intent = Intent(requireActivity(), employee::class.java)
                     startActivity(intent)
                 }
 
                 "user" -> {
-                    // Navigate to User Dashboard or Home
-                    val intent = Intent(requireActivity(), UserHomeActivity::class.java)
-                    startActivity(intent)
+                    findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToUserHomeFragment())
                 }
 
                 else -> {
-                    // Navigate to User Dashboard or Home
-                    val intent = Intent(requireActivity(), UserHomeActivity::class.java)
-                    startActivity(intent)
+                    findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToUserHomeFragment())
                 }
             }
         }

@@ -1,257 +1,260 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFF3E0"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <!-- full-screen background GIF -->
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/bgGif"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#00796B"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_vid"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/main"
-        app:title="WMS"
-        app:titleTextColor="#FFFFFF" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertical_50"
+    <TextView
+        android:id="@+id/tv_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_waterbill"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center"
+        android:text="Welcome to WASA Rawalpindi"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        android:padding="@dimen/_16ssp"
+        app:layout_constraintStart_toStartOf="@+id/gridCards"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- grid container: 2 columns, equal-width cells -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridCards"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:cardCornerRadius="9dp"
-        app:layout_constraintEnd_toStartOf="@id/vertical_50"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#8A8F00"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                app:srcCompat="@drawable/water_bill" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingTop="9dp"
-                android:text="Water Bill"
-                android:textSize="20sp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_complaints"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:cardCornerRadius="9dp"
+        android:padding="@dimen/_15sdp"
+        app:alignmentMode="alignMargins"
+        app:columnCount="2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/vertical_50"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#8A8F00"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                app:srcCompat="@drawable/complaint" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingTop="9dp"
-                android:text="Complaints"
-                android:textSize="20sp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_applymeter"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:cardCornerRadius="9dp"
-        app:layout_constraintEnd_toStartOf="@id/vertical_50"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_waterbill">
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+        app:useDefaultMargins="true">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Water Bill -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_water_bill"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#8A8F00"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_margin="@dimen/_8sdp"
+            android:backgroundTint="@color/transparent"
+            app:cardCornerRadius="9dp"
+            app:layout_columnWeight="1"
+            app:strokeColor="@color/transparent">
 
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                app:srcCompat="@drawable/water_meter" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_ed_vd"
                 android:gravity="center"
-                android:paddingTop="9dp"
-                android:text="Apply new meter"
-                android:textSize="20sp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_waterTiming"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:cardCornerRadius="9dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/vertical_50"
-        app:layout_constraintTop_toBottomOf="@id/card_complaints">
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    app:srcCompat="@drawable/ic_bill" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="9dp"
+                    android:text="Water Bill"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Complaints -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_complains"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#8A8F00"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_margin="@dimen/_8sdp"
+            android:backgroundTint="@color/transparent"
+            app:cardCornerRadius="9dp"
+            app:layout_columnWeight="1"
+            app:strokeColor="@color/transparent">
 
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                app:srcCompat="@drawable/water_timing" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_ed_vd"
                 android:gravity="center"
-                android:paddingTop="9dp"
-                android:text="Water Timing"
-                android:textSize="20sp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_helpline"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:cardCornerRadius="9dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_applymeter"
-        app:layout_constraintEnd_toStartOf="@id/vertical_50">
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    app:srcCompat="@drawable/ic_complain" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="9dp"
+                    android:text="Complaints"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Apply New Meter -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_apply_meter"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#8A8F00"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_margin="@dimen/_8sdp"
+            android:backgroundTint="@color/transparent"
+            app:cardCornerRadius="9dp"
+            app:layout_columnWeight="1"
+            app:strokeColor="@color/transparent">
 
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                app:srcCompat="@drawable/helpline" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_ed_vd"
                 android:gravity="center"
-                android:paddingTop="9dp"
-                android:text="Helpline"
-                android:textSize="20sp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_Officelocations"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:cardCornerRadius="9dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/vertical_50"
-        app:layout_constraintTop_toBottomOf="@id/card_applymeter">
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    app:srcCompat="@drawable/ic_meter" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="9dp"
+                    android:text="Apply Meter"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Water Timing -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_water_timing"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#8A8F00"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_margin="@dimen/_8sdp"
+            android:backgroundTint="@color/transparent"
+            app:cardCornerRadius="9dp"
+            app:layout_columnWeight="1"
+            app:strokeColor="@color/transparent">
 
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                app:srcCompat="@drawable/location" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_ed_vd"
                 android:gravity="center"
-                android:paddingTop="10dp"
-                android:text="Office Locations"
-                android:textSize="20sp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_jobvacancies"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:cardBackgroundColor="#8A8F00"
-        app:cardCornerRadius="9dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/vertical_50"
-        app:layout_constraintTop_toBottomOf="@id/card_helpline">
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    app:srcCompat="@drawable/ic_time" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="9dp"
+                    android:text="Water Timing"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            >
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:background="#8A8F00"
-                app:srcCompat="@drawable/job" />
+        <!-- Helpline -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_helpline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:backgroundTint="@color/transparent"
+            app:cardCornerRadius="9dp"
+            app:layout_columnWeight="1"
+            app:strokeColor="@color/transparent">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_ed_vd"
                 android:gravity="center"
-                android:text="Job Vacancies"
-                android:textSize="20sp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
 
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    app:srcCompat="@drawable/ic_helpline" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="9dp"
+                    android:text="Helpline"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Office Locations -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:backgroundTint="@color/transparent"
+            app:cardCornerRadius="9dp"
+            app:layout_columnWeight="1"
+            app:strokeColor="@color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_ed_vd"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    app:srcCompat="@drawable/ic_location" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="9dp"
+                    android:text="Office Locations"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.gridlayout.widget.GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

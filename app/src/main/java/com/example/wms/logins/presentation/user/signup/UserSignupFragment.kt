@@ -18,6 +18,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.wms.R
 import com.example.wms.databinding.FragmentUserSignupBinding
+import com.example.wms.logins.presentation.user.login.UserLoginFragmentDirections
 import com.example.wms.ui.user.UserHomeActivity
 import com.example.wms.utils.LoginResult
 import com.example.wms.utils.PreferenceHelper
@@ -74,8 +75,7 @@ class UserSignupFragment : Fragment() {
 
                     // Navigate to User Dashboard or Login Screen
                     // Navigate to User Dashboard or Home
-                    val intent = Intent(requireActivity(), UserHomeActivity::class.java)
-                    startActivity(intent)
+                    findNavController().navigate(UserLoginFragmentDirections.actionUserLoginFragmentToUserHomeFragment())
                 }
 
                 is LoginResult.Error -> {

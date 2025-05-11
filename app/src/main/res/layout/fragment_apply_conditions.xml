@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/bgGif"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_vid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/backButton"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_margin="@dimen/_15sdp"
+        android:contentDescription="@string/back_button_desc"
+        android:src="@drawable/ic_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@id/checkboxAccept"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tvTermsCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_15sdp"
+            android:scrollbars="vertical"
+            android:text="Welcome to WASA Rawalpindi. By using our services, you agree to the following terms and conditions. Please read them carefully.
+
+1. Acceptance of Terms
+By accessing and using the services provided by WASA Rawalpindi, you agree to comply with and be bound by these Terms and Conditions, which may be updated from time to time. If you do not agree to these terms, please do not use our services.
+
+2. Use of Services
+You agree to use the services provided by WASA Rawalpindi for lawful purposes only and in accordance with these Terms and Conditions. You are responsible for any data entered, including but not limited to personal details, complaints, and service requests.
+
+3. Service Availability
+We strive to ensure our services are available 24/7; however, the availability of the service may be impacted by maintenance, upgrades, or unexpected technical issues. We cannot guarantee uninterrupted access.
+
+4. User Account
+To access certain services, you may need to register for an account. You agree to provide accurate and complete information during registration and to keep it up to date. You are responsible for maintaining the confidentiality of your account and password.
+
+5. Privacy Policy
+Your use of our services is subject to our Privacy Policy, which explains how we collect, use, and protect your personal information. By using our services, you consent to the collection and use of your data as described in the Privacy Policy.
+
+6. Limitations of Liability
+WASA Rawalpindi will not be held responsible for any damage or loss of data resulting from the use of our services. We are not liable for any direct, indirect, incidental, or consequential damages that arise from the use or inability to use our services.
+
+7. Service Interruptions
+We reserve the right to suspend or terminate your access to the services at any time without notice if we believe you have violated these Terms and Conditions.
+
+8. Indemnification
+You agree to indemnify and hold harmless WASA Rawalpindi, its employees, agents, and affiliates from any claims, damages, or losses arising from your use of the services or any violation of these Terms and Conditions.
+
+9. Amendments
+WASA Rawalpindi reserves the right to modify or amend these Terms and Conditions at any time. All updates will be posted on this page, and your continued use of the services after such updates constitutes your acceptance of the changes.
+
+10. Governing Law
+These Terms and Conditions are governed by and construed in accordance with the laws of Pakistan. Any disputes arising from the use of our services shall be resolved in the courts of Rawalpindi, Pakistan.
+
+11. Contact Us
+If you have any questions about these Terms and Conditions, please contact us through the following:
+
+Email: support@wasa.pk
+
+Phone: 1334 (Helpline)
+
+Office: WASA Rawalpindi Office, Main Road, Pirwadhai, Rawalpindi, 46000, Pakistan.
+
+12. Disclaimer
+The services provided by WASA Rawalpindi are offered as-is without any warranties, express or implied. We do not guarantee the accuracy, reliability, or completeness of any content provided on our website or through our services."
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp" />
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/checkboxAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/white"
+        android:padding="16dp"
+        android:text="I accept the terms and conditions"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_continue"
+        app:layout_constraintStart_toStartOf="@+id/btn_continue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_continue"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:backgroundTint="@color/malibu"
+        android:enabled="true"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:cornerRadius="@dimen/_5sdp"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

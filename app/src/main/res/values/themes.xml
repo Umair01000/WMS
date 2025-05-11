@@ -1,18 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <!-- Base application theme. -->
     <style name="Base.Theme.WMS" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- hide the status bar -->
+        <item name="android:windowFullscreen">true</item>
+        <!-- optional: draw under status bar if you ever make it transparent -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
+    <!-- your main theme now inherits the fullscreen flag -->
     <style name="Theme.WMS" parent="Base.Theme.WMS" />
 
-    <style name="Theme.WMS.NoActionBar">
+    <!-- if you ever need a variant with no action bar (status bar is already hidden) -->
+    <style name="Theme.WMS.NoActionBar" parent="Base.Theme.WMS">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Theme.WMS.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.WMS.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.WMS.PopupOverlay"   parent="ThemeOverlay.AppCompat.Light" />
 </resources>

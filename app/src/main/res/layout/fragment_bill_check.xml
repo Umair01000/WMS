@@ -29,31 +29,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/consumer_number"
-        android:layout_width="0dp"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:text="Enter Consumer Number"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ed_consumer_number"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ed_consumer_number"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
         android:layout_marginHorizontal="@dimen/_15sdp"
-        android:layout_marginTop="@dimen/_32sdp"
-        android:hint="@string/enter_consumer_number"
-        android:textColorHint="@color/ad_color"
-        app:errorEnabled="true"
-        app:hintTextColor="@color/white"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/bg_ed_vd"
+        android:digits="0123456789"
+        android:hint="Enter Consumer Number"
+        android:inputType="number"
+        android:maxLength="8"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backButton">
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ed_consumer_number"
-            android:layout_width="match_parent"
-            android:digits="0123456789"
-            android:maxLength="8"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_ed_vd"
-            android:imeOptions="actionNext"
-            android:inputType="number"
-            android:textColor="@color/white" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_next"

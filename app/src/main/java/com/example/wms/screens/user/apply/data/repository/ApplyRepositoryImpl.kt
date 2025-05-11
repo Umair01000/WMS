@@ -14,6 +14,7 @@ class ApplyRepositoryImpl(
 
     override suspend fun saveApplication(applyData: ApplyData): ApplyResult {
         return try {
+            ApplyResult.Loading
             applyCollection.add(applyData).await()
             ApplyResult.Success("Application saved successfully.")
         } catch (e: Exception) {

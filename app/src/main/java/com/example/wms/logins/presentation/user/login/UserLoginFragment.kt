@@ -19,7 +19,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.wms.R
 import com.example.wms.databinding.FragmentUserLoginBinding
-import com.example.wms.ui.user.UserHomeActivity
 import com.example.wms.utils.LoginResult
 import com.example.wms.utils.PreferenceHelper
 

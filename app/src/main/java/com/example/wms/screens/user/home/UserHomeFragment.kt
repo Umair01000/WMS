@@ -38,6 +38,9 @@ class UserHomeFragment : Fragment() {
             btnApplyMeter.setOnClickListener {
                 findNavController().navigate(UserHomeFragmentDirections.actionUserHomeFragmentToApplyConditionsFragment())
             }
+            btnComplains.setOnClickListener {
+                findNavController().navigate(UserHomeFragmentDirections.actionUserHomeFragmentToComplaintNameFragment())
+            }
         }
     }
 }

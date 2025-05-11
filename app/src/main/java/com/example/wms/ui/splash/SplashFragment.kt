@@ -15,7 +15,6 @@ import com.example.wms.R
 import com.example.wms.databinding.FragmentSplashBinding
 import com.example.wms.logins.presentation.user.login.UserLoginFragmentDirections
 import com.example.wms.ui.employee.employee
-import com.example.wms.ui.user.UserHomeActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class SplashFragment : Fragment() {

@@ -16,7 +16,10 @@ class ApplyViewModel(
     val applicationResult = MutableLiveData<ApplyResult>()
 
     fun applyForService(applyData: ApplyData) {
-        Log.d("ApplyViewModel", "ApplyData: name=${applyData.name}, cnic=${applyData.cnic}, phoneNumber=${applyData.phoneNumber}, address=${applyData.address}")
+        Log.d(
+            "ApplyViewModel",
+            "ApplyData: name=${applyData.name}, cnic=${applyData.cnic}, phoneNumber=${applyData.phoneNumber}, address=${applyData.address}"
+        )
 
         viewModelScope.launch {
             applicationResult.value = ApplyResult.Loading

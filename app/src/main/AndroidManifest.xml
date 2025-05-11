@@ -34,21 +34,11 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="YOUR_API_KEY" />
 
-        <activity
-            android:name=".ui.user.UserHomeActivity"
-            android:exported="false"
-            android:label="@string/title_activity_employee"
-            android:theme="@style/Theme.WMS.NoActionBar" />
-        <activity
-            android:name=".waterbill"
-            android:exported="false" />
         <activity android:name=".complaints" />
-        <activity android:name=".ApplyMeterActivity" />
         <activity android:name=".officelocations" />
         <activity
             android:name=".jobvacancies"
             android:exported="false" />
-        <activity android:name=".helpline" />
         <activity
             android:name=".workschedule"
             android:exported="false"></activity>

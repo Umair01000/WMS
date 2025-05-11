@@ -1,5 +1,6 @@
 package com.example.wms.screens.user.apply.presentation.screens
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.provider.Settings
 import android.text.Editable
@@ -33,6 +34,7 @@ class ApplyAddressFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("HardwareIds")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -49,7 +51,7 @@ class ApplyAddressFragment : Fragment() {
                     Toast.makeText(requireContext(), result.message, Toast.LENGTH_LONG).show()
                 }
 
-                ApplyResult.Loading ->  showLoading(true)
+                ApplyResult.Loading -> showLoading(true)
             }
         })
 
@@ -66,7 +68,7 @@ class ApplyAddressFragment : Fragment() {
             override fun onTextChanged(
                 charSequence: CharSequence?, start: Int, before: Int, count: Int
             ) {
-                val isAddressValid = charSequence?.length ?: 0 > 5
+                val isAddressValid = (charSequence?.length ?: 0) > 5
                 binding.btnApply.isEnabled = isAddressValid
             }
 
@@ -79,11 +81,13 @@ class ApplyAddressFragment : Fragment() {
             val cnic = ApplyAddressFragmentArgs.fromBundle(requireArguments()).cnic
             val number = ApplyAddressFragmentArgs.fromBundle(requireArguments()).number
             val address = binding.edAddress.text.toString()
-
             if (address.isNotEmpty()) {
-                val deviceId = Settings.Secure.getString(requireContext().contentResolver, Settings.Secure.ANDROID_ID)
+                val deviceId = Settings.Secure.getString(
+                    requireContext().contentResolver,
+                    Settings.Secure.ANDROID_ID
+                )
 
-                val applyData = ApplyData(name, cnic, number, address,deviceId)
+                val applyData = ApplyData(name, cnic, number, address, deviceId)
                 viewModel.applyForService(applyData)
             }
         }
@@ -91,28 +95,21 @@ class ApplyAddressFragment : Fragment() {
 
     private fun showLoading(isLoading: Boolean) {
         if (isLoading) {
-            // Hide the content and show the ProgressBar
             binding.apply {
-                // Hide content
                 edAddress.isEnabled = false
                 btnApply.isEnabled = false
                 backButton.isEnabled = false
-                // Show ProgressBar
                 progressBar.visibility = View.VISIBLE
             }
         } else {
-            // Show the content and hide the ProgressBar
             binding.apply {
-                // Show content
                 edAddress.isEnabled = true
                 btnApply.isEnabled = true
                 backButton.isEnabled = true
-                // Hide ProgressBar
                 progressBar.visibility = View.GONE
             }
         }
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

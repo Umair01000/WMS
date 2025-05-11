@@ -25,32 +25,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/cnic"
-        android:layout_width="0dp"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:text="Enter Cnic Number"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ed_cnic"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ed_cnic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
         android:layout_marginHorizontal="@dimen/_15sdp"
-        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/bg_ed_vd"
+        android:digits="0123456789"
         android:hint="Enter Cnic"
-        android:textColorHint="@color/ad_color"
-        app:errorEnabled="true"
-        app:hintTextColor="@color/white"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="15"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backButton">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ed_cnic"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_ed_vd"
-            android:digits="0123456789"
-            android:imeOptions="actionNext"
-            android:inputType="number"
-            android:maxLength="15"
-            android:textColor="@color/white" />
-    </com.google.android.material.textfield.TextInputLayout>
-
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_continue"

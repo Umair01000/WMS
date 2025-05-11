@@ -15,30 +15,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/progressBarContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/black_0_3"
-        android:visibility="gone"
-        app:cardCornerRadius="@dimen/_100sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/_5sdp"
-            android:backgroundTint="@color/white"
-            android:foregroundTint="@color/white"
-            android:progressTint="@color/white" />
-    </androidx.cardview.widget.CardView>
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/backButton"
         android:layout_width="@dimen/_25sdp"
@@ -55,24 +31,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_5sdp"
         android:layout_marginTop="@dimen/_35sdp"
-        android:text="Enter Address"
+        android:text="Enter Your Name"
         android:textColor="@color/white"
         android:textSize="@dimen/_16ssp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/ed_address"
+        app:layout_constraintStart_toStartOf="@+id/ed_name"
         app:layout_constraintTop_toBottomOf="@+id/backButton" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/ed_address"
+        android:id="@+id/ed_name"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_15sdp"
         android:background="@drawable/bg_ed_vd"
-        android:hint="Enter Address"
+        android:hint="Enter Name"
         android:imeOptions="actionNext"
-        android:inputType="textMultiLine"
-        android:maxLines="5"
+        android:inputType="text"
         android:paddingHorizontal="@dimen/_10sdp"
         android:textColor="@color/white"
         android:textSize="@dimen/_10ssp"
@@ -81,14 +56,13 @@
         app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_apply"
+        android:id="@+id/btn_continue"
         android:layout_width="0dp"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginBottom="@dimen/_20sdp"
         android:backgroundTint="@color/malibu"
-        android:enabled="false"
-        android:text="Apply"
+        android:text="Continue"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="@dimen/_14ssp"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Background GIF (optional) -->
+    <!-- Background GIF -->
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/bgGif"
         android:layout_width="0dp"
@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Application Submitted Successfully!"
+                android:text="Complaint Submitted Successfully!"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16ssp" />
 

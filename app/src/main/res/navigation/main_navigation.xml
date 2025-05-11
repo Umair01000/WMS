@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/adminLoginFragment"
+        android:name="com.example.wms.logins.presentation.admin.AdminLoginFragment"
+        android:label="fragment_admin_login"
+        tools:layout="@layout/fragment_admin_login" />
+    <fragment
+        android:id="@+id/userLoginFragment"
+        android:name="com.example.wms.logins.presentation.user.login.UserLoginFragment"
+        android:label="fragment_user_login"
+        tools:layout="@layout/fragment_user_login">
+        <action
+            android:id="@+id/action_userLoginFragment_to_adminLoginFragment"
+            app:destination="@id/adminLoginFragment" />
+        <action
+            android:id="@+id/action_userLoginFragment_to_userSignupFragment"
+            app:destination="@id/userSignupFragment" />
+        <action
+            android:id="@+id/action_userLoginFragment_to_userForgetPasswordFragment"
+            app:destination="@id/userForgetPasswordFragment" />
+        <action
+            android:id="@+id/action_userLoginFragment_to_employeeLoginFragment"
+            app:destination="@id/employeeLoginFragment" />
+        <action
+            android:id="@+id/action_userLoginFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSignupFragment"
+        android:name="com.example.wms.logins.presentation.user.signup.UserSignupFragment"
+        android:label="fragment_user_signup"
+        tools:layout="@layout/fragment_user_signup" />
+    <fragment
+        android:id="@+id/userForgetPasswordFragment"
+        android:name="com.example.wms.logins.presentation.user.forget.UserForgetPasswordFragment"
+        android:label="fragment_user_forget_password"
+        tools:layout="@layout/fragment_user_forget_password" >
+        <action
+            android:id="@+id/action_userForgetPasswordFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeLoginFragment"
+        android:name="com.example.wms.logins.presentation.employee.EmployeeLoginFragment"
+        android:label="fragment_employee_login"
+        tools:layout="@layout/fragment_employee_login" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.wms.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_userLoginFragment"
+            app:destination="@id/userLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userHomeFragment"
+        android:name="com.example.wms.UserHomeFragment"
+        android:label="fragment_user_home"
+        tools:layout="@layout/fragment_user_home" />
+</navigation>

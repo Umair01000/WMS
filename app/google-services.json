@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "385859645547",
+    "firebase_url": "https://wms-fyp-4048f-default-rtdb.firebaseio.com",
+    "project_id": "wms-fyp-4048f",
+    "storage_bucket": "wms-fyp-4048f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385859645547:android:9357e342c5aee034a8812e",
+        "android_client_info": {
+          "package_name": "com.example.wms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385859645547-g59bf012oicgbdusrldji6adg5gde7mm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwG3nEYp3xaGVZDgiOPMgOkCUlx-KnwKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385859645547-g59bf012oicgbdusrldji6adg5gde7mm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

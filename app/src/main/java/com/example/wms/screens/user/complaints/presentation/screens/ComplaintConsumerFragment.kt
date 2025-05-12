@@ -24,7 +24,9 @@ class ComplaintConsumerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val name = ComplaintConsumerFragmentArgs.fromBundle(requireArguments()).name
-
+        binding.backButton.setOnClickListener {
+            findNavController().navigateUp()
+        }
         binding.btnContinue.setOnClickListener {
             val consumerNumber = binding.edConsumerNumber.text.toString()
             if (consumerNumber.isNotEmpty()) {

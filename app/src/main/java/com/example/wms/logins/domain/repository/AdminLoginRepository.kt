@@ -1,6 +1,6 @@
 package com.example.wms.logins.domain.repository
 
-import com.example.wms.utils.LoginResult
+import com.example.wms.framework.utils.LoginResult
 
 
 interface AdminLoginRepository {

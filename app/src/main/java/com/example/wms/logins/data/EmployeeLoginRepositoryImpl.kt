@@ -1,8 +1,7 @@
 package com.example.wms.logins.data
 
-import com.example.wms.logins.domain.model.EmployeeCredentials
 import com.example.wms.logins.domain.repository.EmployeeLoginRepository
-import com.example.wms.utils.LoginResult
+import com.example.wms.framework.utils.LoginResult
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
 
@@ -30,20 +29,5 @@ class EmployeeLoginRepositoryImpl(
         }
     }
 
-    override suspend fun initializeEmployeeCredentials() {
-        try {
-            val getId = firestore.collection(collectionName).document().id
-            val employeeDoc = firestore.collection(collectionName).document(getId)
-            val docSnapshot = employeeDoc.get().await()
-            if (!docSnapshot.exists()) {
-                val employeeCredentials = EmployeeCredentials(
-                    email = "employee@gmail.com",
-                    password = "employee123"
-                )
-                employeeDoc.set(employeeCredentials).await()
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
+    override suspend fun initializeEmployeeCredentials() {}
 }

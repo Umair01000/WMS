@@ -1,4 +1,4 @@
-package com.example.wms.utils
+package com.example.wms.framework.utils
 
 sealed class LoginResult {
     data object Loading : LoginResult()

@@ -17,8 +17,8 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.wms.R
 import com.example.wms.databinding.FragmentAdminLoginBinding
-import com.example.wms.utils.LoginResult
-import com.example.wms.utils.PreferenceHelper
+import com.example.wms.framework.utils.LoginResult
+import com.example.wms.framework.utils.PreferenceHelper
 
 class AdminLoginFragment : Fragment() {
     private var _binding: FragmentAdminLoginBinding? = null
@@ -61,7 +61,8 @@ class AdminLoginFragment : Fragment() {
                         getString(R.string.login_success),
                         Toast.LENGTH_SHORT
                     ).show()
-                    PreferenceHelper.saveUserRole(requireContext(), "admin")
+                    PreferenceHelper.saveUserRole(requireActivity(), "admin")
+                    findNavController().navigate(AdminLoginFragmentDirections.actionAdminLoginFragmentToAdminHomeFragment())
                 }
 
                 is LoginResult.Error -> {

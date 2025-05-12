@@ -1,7 +1,6 @@
 package com.example.wms.logins.presentation.user.signup
 
 import android.app.Dialog
-import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -19,8 +18,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.wms.R
 import com.example.wms.databinding.FragmentUserSignupBinding
 import com.example.wms.logins.presentation.user.login.UserLoginFragmentDirections
-import com.example.wms.utils.LoginResult
-import com.example.wms.utils.PreferenceHelper
+import com.example.wms.framework.utils.LoginResult
+import com.example.wms.framework.utils.PreferenceHelper
 
 class UserSignupFragment : Fragment() {
 

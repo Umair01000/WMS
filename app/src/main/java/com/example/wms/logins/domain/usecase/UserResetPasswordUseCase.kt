@@ -1,7 +1,7 @@
 package com.example.wms.logins.domain.usecase
 
 import com.example.wms.logins.domain.repository.UserLoginRepository
-import com.example.wms.utils.LoginResult
+import com.example.wms.framework.utils.LoginResult
 
 class UserResetPasswordUseCase(private val repository: UserLoginRepository) {
     suspend operator fun invoke(email: String): LoginResult {

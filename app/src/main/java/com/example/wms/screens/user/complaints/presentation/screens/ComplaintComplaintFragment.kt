@@ -82,6 +82,9 @@ class ComplaintComplaintFragment : Fragment() {
                 }
             }
         })
+        binding.backButton.setOnClickListener {
+            findNavController().navigateUp()
+        }
 
         binding.btnSubmit.setOnClickListener {
             val complaint = binding.edComplaint.text.toString()

@@ -1,7 +1,7 @@
 package com.example.wms.logins.data
 
 import com.example.wms.logins.domain.repository.UserLoginRepository
-import com.example.wms.utils.LoginResult
+import com.example.wms.framework.utils.LoginResult
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.tasks.await
 

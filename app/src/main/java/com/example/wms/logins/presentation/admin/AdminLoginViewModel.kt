@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.wms.logins.domain.usecase.LoginUseCase
 import com.example.wms.logins.presentation.di.RepositoryModule
-import com.example.wms.utils.LoginResult
+import com.example.wms.framework.utils.LoginResult
 import kotlinx.coroutines.launch
 
 class AdminLoginViewModel : ViewModel() {

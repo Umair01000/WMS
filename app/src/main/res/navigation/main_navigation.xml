@@ -9,7 +9,11 @@
         android:id="@+id/adminLoginFragment"
         android:name="com.example.wms.logins.presentation.admin.AdminLoginFragment"
         android:label="fragment_admin_login"
-        tools:layout="@layout/fragment_admin_login" >
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
+        tools:layout="@layout/fragment_admin_login">
         <action
             android:id="@+id/action_adminLoginFragment_to_adminHomeFragment"
             app:destination="@id/adminHomeFragment" />
@@ -18,6 +22,10 @@
         android:id="@+id/userLoginFragment"
         android:name="com.example.wms.logins.presentation.user.login.UserLoginFragment"
         android:label="fragment_user_login"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_user_login">
         <action
             android:id="@+id/action_userLoginFragment_to_adminLoginFragment"
@@ -39,7 +47,11 @@
         android:id="@+id/userSignupFragment"
         android:name="com.example.wms.logins.presentation.user.signup.UserSignupFragment"
         android:label="fragment_user_signup"
-        tools:layout="@layout/fragment_user_signup" >
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
+        tools:layout="@layout/fragment_user_signup">
         <action
             android:id="@+id/action_userSignupFragment_to_userHomeFragment"
             app:destination="@id/userHomeFragment" />
@@ -48,6 +60,10 @@
         android:id="@+id/userForgetPasswordFragment"
         android:name="com.example.wms.logins.presentation.user.forget.UserForgetPasswordFragment"
         android:label="fragment_user_forget_password"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_user_forget_password">
         <action
             android:id="@+id/action_userForgetPasswordFragment_to_userHomeFragment"
@@ -57,11 +73,19 @@
         android:id="@+id/employeeLoginFragment"
         android:name="com.example.wms.logins.presentation.employee.EmployeeLoginFragment"
         android:label="fragment_employee_login"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_employee_login" />
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.wms.ui.splash.SplashFragment"
         android:label="fragment_splash"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_userLoginFragment"
@@ -69,11 +93,18 @@
         <action
             android:id="@+id/action_splashFragment_to_userHomeFragment"
             app:destination="@id/userHomeFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_adminHomeFragment"
+            app:destination="@id/adminHomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/userHomeFragment"
         android:name="com.example.wms.screens.user.home.UserHomeFragment"
         android:label="fragment_user_home"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_user_home">
         <action
             android:id="@+id/action_userHomeFragment_to_billCheckFragment"
@@ -95,6 +126,10 @@
         android:id="@+id/billCheckFragment"
         android:name="com.example.wms.screens.user.bill.presentation.BillCheckFragment"
         android:label="fragment_bill_check"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_bill_check">
         <action
             android:id="@+id/action_billCheckFragment_to_billDeatailFragment"
@@ -104,6 +139,10 @@
         android:id="@+id/billDetailsFragment"
         android:name="com.example.wms.screens.user.bill.presentation.BillDetailsFragment"
         android:label="fragment_bill_deatail"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_bill_details">
         <argument
             android:name="cCode"
@@ -113,16 +152,28 @@
         android:id="@+id/fragmentHelpline"
         android:name="com.example.wms.screens.user.helpline.FragmentHelpline"
         android:label="fragment_helpline"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_helpline" />
     <fragment
         android:id="@+id/locationFragment"
         android:name="com.example.wms.screens.user.location.LocationFragment"
         android:label="fragment_location"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_location" />
     <fragment
         android:id="@+id/applyNameFragment"
         android:name="com.example.wms.screens.user.apply.presentation.screens.ApplyNameFragment"
         android:label="fragment_apply_name"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_apply_name">
         <action
             android:id="@+id/action_applyNameFragment_to_applyCnicFragment"
@@ -132,6 +183,10 @@
         android:id="@+id/applyConditionsFragment"
         android:name="com.example.wms.screens.user.apply.presentation.screens.ApplyConditionsFragment"
         android:label="fragment_apply_conditions"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_apply_conditions">
         <action
             android:id="@+id/action_applyConditionsFragment_to_applyNameFragment"
@@ -141,6 +196,10 @@
         android:id="@+id/applyCnicFragment"
         android:name="com.example.wms.screens.user.apply.presentation.screens.ApplyCnicFragment"
         android:label="fragment_apply_cnic"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_apply_cnic">
         <action
             android:id="@+id/action_applyCnicFragment_to_applyNumberFragment"
@@ -153,6 +212,10 @@
         android:id="@+id/applyNumberFragment"
         android:name="com.example.wms.screens.user.apply.presentation.screens.ApplyNumberFragment"
         android:label="fragment_apply_number"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_apply_number">
         <action
             android:id="@+id/action_applyNumberFragment_to_applyAddressFragment"
@@ -168,7 +231,11 @@
         android:id="@+id/applyAddressFragment"
         android:name="com.example.wms.screens.user.apply.presentation.screens.ApplyAddressFragment"
         android:label="fragment_apply_address"
-        tools:layout="@layout/fragment_apply_address" >
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
+        tools:layout="@layout/fragment_apply_address">
         <argument
             android:name="name"
             app:argType="string" />
@@ -186,12 +253,20 @@
         android:id="@+id/applySuccessFragment"
         android:name="com.example.wms.screens.user.apply.presentation.screens.ApplySuccessFragment"
         android:label="fragment_apply_success"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_apply_success" />
     <fragment
         android:id="@+id/complaintNameFragment"
         android:name="com.example.wms.screens.user.complaints.presentation.screens.ComplaintNameFragment"
         android:label="fragment_complaint_name"
-        tools:layout="@layout/fragment_complaint_name" >
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
+        tools:layout="@layout/fragment_complaint_name">
         <action
             android:id="@+id/action_complaintNameFragment_to_complaintConsumerFragment"
             app:destination="@id/complaintConsumerFragment" />
@@ -200,7 +275,11 @@
         android:id="@+id/complaintConsumerFragment"
         android:name="com.example.wms.screens.user.complaints.presentation.screens.ComplaintConsumerFragment"
         android:label="fragment_complaint_consumer"
-        tools:layout="@layout/fragment_complaint_consumer" >
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
+        tools:layout="@layout/fragment_complaint_consumer">
         <action
             android:id="@+id/action_complaintConsumerFragment_to_complaintPhoneFragment"
             app:destination="@id/complaintPhoneFragment" />
@@ -212,7 +291,11 @@
         android:id="@+id/complaintPhoneFragment"
         android:name="com.example.wms.screens.user.complaints.presentation.screens.ComplaintPhoneFragment"
         android:label="fragment_complaint_phone"
-        tools:layout="@layout/fragment_complaint_phone" >
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
+        tools:layout="@layout/fragment_complaint_phone">
         <action
             android:id="@+id/action_complaintPhoneFragment_to_complaintComplaintFragment"
             app:destination="@id/complaintComplaintFragment" />
@@ -227,7 +310,11 @@
         android:id="@+id/complaintComplaintFragment"
         android:name="com.example.wms.screens.user.complaints.presentation.screens.ComplaintComplaintFragment"
         android:label="fragment_complaint_complaint"
-        tools:layout="@layout/fragment_complaint_complaint" >
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
+        tools:layout="@layout/fragment_complaint_complaint">
         <argument
             android:name="name"
             app:argType="string" />
@@ -245,10 +332,76 @@
         android:id="@+id/complaintSuccessFragment"
         android:name="com.example.wms.screens.user.complaints.presentation.screens.ComplaintSuccessFragment"
         android:label="fragment_complaint_success"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
         tools:layout="@layout/fragment_complaint_success" />
     <fragment
         android:id="@+id/adminHomeFragment"
-        android:name="com.example.wms.AdminHomeFragment"
+        android:name="com.example.wms.screens.admin.home.AdminHomeFragment"
         android:label="fragment_admin_home"
-        tools:layout="@layout/fragment_admin_home" />
+        tools:layout="@layout/fragment_admin_home">
+        <action
+            android:id="@+id/action_adminHomeFragment_to_addEmployeeEmailFragment"
+            app:destination="@id/addEmployeeEmailFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_adminComplaintsFragment"
+            app:destination="@id/adminComplaintsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEmployeeEmailFragment"
+        android:name="com.example.wms.screens.admin.employee.presentation.screens.AddEmployeeEmailFragment"
+        android:label="fragment_add_employee_email"
+        tools:layout="@layout/fragment_add_employee_email" >
+        <action
+            android:id="@+id/action_addEmployeeEmailFragment_to_addEmployeePasswordFragment"
+            app:destination="@id/addEmployeePasswordFragment" />
+        <action
+            android:id="@+id/action_addEmployeeEmailFragment_to_searchEmployeeFragment"
+            app:destination="@id/searchEmployeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEmployeePasswordFragment"
+        android:name="com.example.wms.screens.admin.employee.presentation.screens.AddEmployeePasswordFragment"
+        android:label="fragment_add_employee_password"
+        tools:layout="@layout/fragment_add_employee_password" >
+        <action
+            android:id="@+id/action_addEmployeePasswordFragment_to_addEmployeeSuccessFragment"
+            app:destination="@id/addEmployeeSuccessFragment" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEmployeeSuccessFragment"
+        android:name="com.example.wms.screens.admin.employee.presentation.screens.AddEmployeeSuccessFragment"
+        android:label="fragment_add_employee_success"
+        tools:layout="@layout/fragment_add_employee_success" />
+    <fragment
+        android:id="@+id/searchEmployeeFragment"
+        android:name="com.example.wms.screens.admin.employee.presentation.screens.SearchEmployeeFragment"
+        android:label="fragment_search_employee"
+        tools:layout="@layout/fragment_search_employee" >
+        <action
+            android:id="@+id/action_searchEmployeeFragment_to_searchEmployeeResultFragment"
+            app:destination="@id/searchEmployeeResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchEmployeeResultFragment"
+        android:name="com.example.wms.screens.admin.employee.presentation.screens.SearchEmployeeResultFragment"
+        android:label="fragment_search_employee_result"
+        tools:layout="@layout/fragment_search_employee_result" >
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminComplaintsFragment"
+        android:name="com.example.wms.screens.admin.complaints.presentation.screens.AdminComplaintsFragment"
+        android:label="fragment_admin_complaints"
+        tools:layout="@layout/fragment_admin_complaints" />
 </navigation>

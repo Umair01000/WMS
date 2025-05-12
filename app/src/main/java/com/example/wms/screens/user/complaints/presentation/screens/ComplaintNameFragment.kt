@@ -22,7 +22,9 @@ class ComplaintNameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.backButton.setOnClickListener {
+            findNavController().navigateUp()
+        }
         binding.btnContinue.setOnClickListener {
             val name = binding.edName.text.toString()
             if (name.isNotEmpty()) {

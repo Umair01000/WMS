@@ -26,7 +26,9 @@ class ComplaintPhoneFragment : Fragment() {
         val name = ComplaintPhoneFragmentArgs.fromBundle(requireArguments()).name
         val consumerNumber =
             ComplaintPhoneFragmentArgs.fromBundle(requireArguments()).consumerNumber
-
+        binding.backButton.setOnClickListener {
+            findNavController().navigateUp()
+        }
         binding.btnContinue.setOnClickListener {
             val phoneNumber = binding.edPhoneNumber.text.toString()
             if (phoneNumber.isNotEmpty()) {

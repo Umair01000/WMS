@@ -18,8 +18,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.wms.R
 import com.example.wms.databinding.FragmentEmployeeLoginBinding
 import com.example.wms.ui.employee.employee
-import com.example.wms.utils.LoginResult
-import com.example.wms.utils.PreferenceHelper
+import com.example.wms.framework.utils.LoginResult
+import com.example.wms.framework.utils.PreferenceHelper
 
 class EmployeeLoginFragment : Fragment() {
     private var _binding: FragmentEmployeeLoginBinding? = null

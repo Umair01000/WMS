@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.wms.R
 import com.example.wms.databinding.FragmentSplashBinding
+import com.example.wms.framework.utils.PreferenceHelper
 import com.example.wms.logins.presentation.user.login.UserLoginFragmentDirections
 import com.example.wms.ui.employee.employee
 import com.google.firebase.auth.FirebaseAuth
@@ -50,11 +51,11 @@ class SplashFragment : Fragment() {
             findNavController().navigate(R.id.action_splashFragment_to_userLoginFragment)
         } else {
             // User is logged in, check role
-            val userRole = sharedPreferences.getString("user_role", "user")
+            val userRole = PreferenceHelper.getUserRole(requireActivity())
 
             when (userRole) {
                 "admin" -> {
-//                    findNavController().navigate(R.id.action_splashFragment_to_adminDashboardFragment)
+                    findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToAdminHomeFragment())
                 }
 
                 "employee" -> {

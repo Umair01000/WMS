@@ -73,7 +73,7 @@ class UserSignupFragment : Fragment() {
 
                     // Navigate to User Dashboard or Login Screen
                     // Navigate to User Dashboard or Home
-                    findNavController().navigate(UserLoginFragmentDirections.actionUserLoginFragmentToUserHomeFragment())
+                    findNavController().navigate(UserSignupFragmentDirections.actionUserSignupFragmentToUserHomeFragment())
                 }
 
                 is LoginResult.Error -> {

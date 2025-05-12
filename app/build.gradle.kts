@@ -99,23 +99,28 @@ dependencies {
     implementation("io.coil-kt:coil:2.6.0")
 
     // Animation API
-    implementation ("com.airbnb.android:lottie:6.0.0")
+    implementation("com.airbnb.android:lottie:6.0.0")
 
     implementation("com.intuit.ssp:ssp-android:1.1.0")
     implementation("com.intuit.sdp:sdp-android:1.1.0")
 
     // Firebase Firestore
-    implementation ("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.firebase:firebase-firestore-ktx")
 
     // Firebase Authentication (Optional, if you plan to use it)
-    implementation ("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-auth-ktx")
 
-    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.25")
+    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.25")
 
-    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-scalars:2.9.0")
-    implementation ("org.jsoup:jsoup:1.18.1")
-    implementation ("org.osmdroid:osmdroid-android:6.1.17")
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
+    implementation("org.jsoup:jsoup:1.18.1")
+    implementation("org.osmdroid:osmdroid-android:6.1.17")
+
+    implementation("com.thoughtworks.xstream:xstream:1.4.10") {
+        exclude( group= "xmlpull", module= "xmlpull")
+    }  // For MarkdownView
+    implementation("io.noties.markwon:core:4.6.2")  // For MarkdownView
 }
 

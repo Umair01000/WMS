@@ -28,5 +28,14 @@ class AdminHomeFragment : Fragment() {
         binding.btnComplaints.setOnClickListener {
             findNavController().navigate(AdminHomeFragmentDirections.actionAdminHomeFragmentToAdminComplaintsFragment())
         }
+        binding.btnWaterBills.setOnClickListener {
+            findNavController().navigate(AdminHomeFragmentDirections.actionAdminHomeFragmentToAdminBillFragment())
+        }
+        binding.btnNewMeters.setOnClickListener {
+            findNavController().navigate(AdminHomeFragmentDirections.actionAdminHomeFragmentToAdminMeterRequestFragment())
+        }
+        binding.btnEmployeeAttendance.setOnClickListener {
+            findNavController().navigate(AdminHomeFragmentDirections.actionAdminHomeFragmentToAdminTimerFragment())
+        }
     }
 }

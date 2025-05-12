@@ -121,6 +121,12 @@
         <action
             android:id="@+id/action_userHomeFragment_to_complaintNameFragment"
             app:destination="@id/complaintNameFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_chatbotFragment"
+            app:destination="@id/chatbotFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_userWorkingHoursFragment"
+            app:destination="@id/userWorkingHoursFragment" />
     </fragment>
     <fragment
         android:id="@+id/billCheckFragment"
@@ -348,6 +354,15 @@
         <action
             android:id="@+id/action_adminHomeFragment_to_adminComplaintsFragment"
             app:destination="@id/adminComplaintsFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_adminBillFragment"
+            app:destination="@id/adminBillFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_adminMeterRequestFragment"
+            app:destination="@id/adminMeterRequestFragment" />
+        <action
+            android:id="@+id/action_adminHomeFragment_to_adminTimerFragment"
+            app:destination="@id/adminTimerFragment" />
     </fragment>
     <fragment
         android:id="@+id/addEmployeeEmailFragment"
@@ -404,4 +419,51 @@
         android:name="com.example.wms.screens.admin.complaints.presentation.screens.AdminComplaintsFragment"
         android:label="fragment_admin_complaints"
         tools:layout="@layout/fragment_admin_complaints" />
+    <fragment
+        android:id="@+id/chatbotFragment"
+        android:name="com.example.wms.screens.user.chatbot.presentation.ChatbotFragment"
+        android:label="fragment_chatbot"
+        tools:layout="@layout/fragment_chatbot" />
+    <fragment
+        android:id="@+id/adminBillFragment"
+        android:name="com.example.wms.screens.admin.bill.AdminBillFragment"
+        android:label="fragment_admin_bill"
+        tools:layout="@layout/fragment_admin_bill" >
+        <action
+            android:id="@+id/action_adminBillFragment_to_adminBillDetailsFragment"
+            app:destination="@id/adminBillDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminBillDetailsFragment"
+        android:name="com.example.wms.screens.admin.bill.AdminBillDetailsFragment"
+        android:label="fragment_admin_bill_details"
+        tools:layout="@layout/fragment_admin_bill_details" >
+        <argument
+            android:name="cCode"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminMeterRequestFragment"
+        android:name="com.example.wms.screens.admin.meterrequests.presentation.AdminMeterRequestFragment"
+        android:label="fragment_admin_meter_request"
+        tools:layout="@layout/fragment_admin_meter_request" />
+    <fragment
+        android:id="@+id/adminTimerFragment"
+        android:name="com.example.wms.screens.admin.timing.presentation.screens.AdminTimerFragment"
+        android:label="fragment_admin_timer"
+        tools:layout="@layout/fragment_admin_timer" >
+        <action
+            android:id="@+id/action_adminTimerFragment_to_timerSaveFragment"
+            app:destination="@id/timerSaveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timerSaveFragment"
+        android:name="com.example.wms.screens.admin.timing.presentation.screens.TimerSaveFragment"
+        android:label="fragment_timer_save"
+        tools:layout="@layout/fragment_timer_save" />
+    <fragment
+        android:id="@+id/userWorkingHoursFragment"
+        android:name="com.example.wms.screens.user.watertiming.presentation.UserWorkingHoursFragment"
+        android:label="fragment_user_working_hours"
+        tools:layout="@layout/fragment_user_working_hours" />
 </navigation>

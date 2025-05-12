@@ -41,6 +41,12 @@ class UserHomeFragment : Fragment() {
             btnComplains.setOnClickListener {
                 findNavController().navigate(UserHomeFragmentDirections.actionUserHomeFragmentToComplaintNameFragment())
             }
+            btnChatbot.setOnClickListener {
+                findNavController().navigate(UserHomeFragmentDirections.actionUserHomeFragmentToChatbotFragment())
+            }
+            btnWaterTiming.setOnClickListener {
+                findNavController().navigate(UserHomeFragmentDirections.actionUserHomeFragmentToUserWorkingHoursFragment())
+            }
         }
     }
 }
